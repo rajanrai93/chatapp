@@ -6,6 +6,14 @@ var io = require("socket.io")(server);
 var usernames = [];
 var msgs = [];
 
+server.listen(port, (err)=> {
+    if(err) {
+        console.log("its Working " + err);
+        return false;
+    }
+})
+
+
 
 io.on("connection", function(socket){
     console.log("user is connected");
