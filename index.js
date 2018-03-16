@@ -8,7 +8,7 @@ var msgs = [];
 
 server.listen(port, (err)=> {
     if(err) {
-        console.log("its Working " + err);
+        console.log("it is Working " + err);
         return false;
     }
 })
