@@ -27,7 +27,7 @@ io.on("connection", function(socket){
         console.log("users sent a msg");
         msgs.push(data);
         
-        io.emit("msgsent", msgs);
+        io.emit("msgssent", msgs);
         
         
         
