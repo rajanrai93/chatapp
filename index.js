@@ -27,15 +27,14 @@ io.on("connection", function(socket){
         console.log("users sent a msg");
         msgs.push(data);
         
-        io.emit("msgssent", msgs);
+        io.emit("msgsent", msgs);
         
         
         
     });
     
       socket.on('change color', (color) => {
-    // once we get a 'change color' event from one of our clients, we will send it to the rest of the clients
-    // we make use of the socket.emit method again with the argument given to use from the callback function above
+   
     console.log('Color Changed to: ', color)
     io.sockets.emit('change color', color)
   })
