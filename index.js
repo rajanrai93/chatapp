@@ -60,7 +60,7 @@ io.on("connection", function(socket){
     /////
     var allqs = {};
 
-io.on("connection", function(socket){
+
     
     socket.on("joinroom", function(data){
         console.log("joining room", data);
@@ -89,19 +89,10 @@ io.on("connection", function(socket){
         socket.to(socket.myRoom).emit("newq", data); 
     });
     
-    socket.on("disconnect", function(){
-        
-    })
-});
 
-server.listen(port, (err)=>{
-    if(err){
-        console.log(err);
-        return false;
-    }
-    
-    console.log("Port is running");
-})
+
+
+
     /////
     
     
