@@ -77,9 +77,9 @@ io.on("connection", function(socket){
     });
     
     socket.on("answer", function(data){
-        var msg = "WRONG!";
+        var msg = "Correct!";
         if(data == allqs[socket.myRoom].qobj.a){
-            msg = "You've won in life";
+            msg = "Wrong";
         }
         socket.emit("result", msg);
     });
